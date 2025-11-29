@@ -1,0 +1,46 @@
+@import '../../../styles/index';
+
+.heading-and-subheading {
+  @include flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 3em;
+  white-space: unset;
+
+  // Mobile-Large Styles //
+  @include respond-to(mobile-l) {
+    margin-bottom: 4em;
+  }
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    flex-direction: row;
+    gap: 1.5em;
+  }
+
+  // Desktop Styles //
+  @include respond-to(desktop-s) {
+    gap: 2.5em;
+    margin-bottom: 5em;
+    white-space: pre-line;
+  }
+
+  h2 {
+    @include typography-h2;
+    padding: 0em 0.5em;
+    background-color: $green-color;
+    border-radius: 0.5em;
+  }
+
+  p {
+    @include typography-p;
+    max-width: 600px;
+    width: 100%;
+
+    // Tablet Styles //
+    @include respond-to(tablet) {
+      width: max-content;
+    }
+  }
+}
