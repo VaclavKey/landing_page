@@ -1,4 +1,6 @@
+# -------------------------
 # Logs
+# -------------------------
 logs
 *.log
 npm-debug.log*
@@ -7,18 +9,73 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# -------------------------
+# Node modules
+# -------------------------
+node_modules/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# -------------------------
+# Build output
+# -------------------------
+dist/
+dist-ssr/
+storybook-static/
+
+# -------------------------
+# Vite cache
+# -------------------------
+.vite/
+.cache/
+
+# -------------------------
+# TypeScript
+# -------------------------
+*.tsbuildinfo
+
+# -------------------------
+# Environment files
+# -------------------------
+*.local
+.env
+.env.*
+!.env.example
+
+# -------------------------
+# Storybook
+# -------------------------
+.storybook/out
+.storybook/.cache
+
+# -------------------------
+# Vitest / Test coverage
+# -------------------------
+coverage/
+
+# -------------------------
+# OS files
+# -------------------------
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# -------------------------
+# IDE / Editor
+# -------------------------
+.vscode/
+.idea/
+
+# -------------------------
+# Temporary / Misc
+# -------------------------
+*.tmp
+*.swp
+*.bak
+
+# -------------------------
+# Exclude all assets except what's needed
+# -------------------------
+# Если хочешь хранить все изображения и иллюстрации, оставляем их, иначе можно игнорировать
+# Например, можно исключить промежуточные генерации:
+*.psd
+*.ai
+*.sketch
+*.xcf
