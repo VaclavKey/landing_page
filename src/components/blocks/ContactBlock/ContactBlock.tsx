@@ -62,7 +62,6 @@ export const ContactBlock = () => {
           {/* Radio-Buttons */}
           <FormRadioGroup
             buttons={radioButtons}
-            className={styles['radio-group']}
           />
 
           {/* Input-Fields */}
