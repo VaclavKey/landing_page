@@ -1,0 +1,42 @@
+@import '../../../../styles/index.scss';
+
+.card {
+  @include flex-start;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+.text {
+  @include typography-p;
+  color: $white-color;
+  font-weight: 300;
+}
+
+.card-button {
+  @include flex-center;
+  background-color: transparent;
+  border: none;
+  transition: $fast-transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.card-button-text {
+  @include typography-h4;
+  color: $green-color;
+}
+
+.card-button-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.svg-arrow {
+  stroke: $green-color;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
