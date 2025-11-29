@@ -1,0 +1,19 @@
+@import '../../../../styles/index.scss';
+
+.submit-button {
+  @include typography-h4;
+  color: $white-color;
+  font-weight: 300;
+  width: 100%;
+  padding: $button-padding;
+  background-color: $dark-color;
+  border: none;
+  border-radius: $button-border-radius;
+  transition: $fast-transition;
+
+  &:hover {
+    color: $black-color;
+    background-color: $grey-color;
+    outline: $dark-border;
+  }
+}
