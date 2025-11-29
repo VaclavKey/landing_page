@@ -46,11 +46,14 @@
     transition: all 0.2 ease;
   }
 
+
+  ///////////////    1 1 1 1 1 1 1
+  /// ////////////      1 1 1 1
   &::after {
     content: '';
     position: absolute;
     top: 50%;
-    left: 0.5em;
+    left: 0.4315em;
     width: 1em;
     height: 1em;
     background: $green-color;
