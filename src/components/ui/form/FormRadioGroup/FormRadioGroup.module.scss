@@ -1,0 +1,17 @@
+@import '../../../../styles/index.scss';
+
+.radio-group {
+  @include flex-start;
+  flex-direction: column;
+  gap: 1.5em;
+
+  // Mobile-L Styles //
+  @include respond-to(mobile-l) {
+    flex-direction: row;
+  }
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    gap: 2.25em;
+  }
+}

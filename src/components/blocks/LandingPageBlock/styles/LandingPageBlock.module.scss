@@ -1,0 +1,22 @@
+@import '../../../../styles/index.scss';
+
+.landing-page-block {
+  margin-bottom: $block-bottom-spacing-mobile;
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    margin-bottom: $block-bottom-spacing-tablet;
+  }
+
+  // Desktop Styles //
+  @include respond-to(desktop-s) {
+    margin-bottom: $block-bottom-spacing-m;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4.375em;
+  margin-top: 4.375em;
+}

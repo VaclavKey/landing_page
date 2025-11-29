@@ -1,0 +1,101 @@
+@import '../../../../styles/index.scss';
+
+.subscription-block {
+  width: 100%;
+  padding: 1.5em 1em;
+  background-color: $dark-grey-color;
+  border-radius: $button-border-radius;
+
+  // Navbar-Based BreakPoint-1 //
+  @include respond-to(550px) {
+    padding: 2.5em 2.5em;
+  }
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    width: unset;
+  }
+
+  // Navbar-Based BreakPoint-2 //
+  @include respond-to(1100px) {
+    padding: 3.75em 2.5em;
+  }
+}
+
+.subscription-form {
+  @include flex-between;
+  flex-direction: column;
+  gap: 1.25em;
+
+  // Navbar-Based BreakPoint //
+  @include respond-to(1100px) {
+    flex-direction: row;
+  }
+}
+
+.subscription-form-field {
+  @include flex-start;
+  max-height: 68px;
+  width: 100%;
+
+  // Navbar-Based BreakPoint //
+  @include respond-to(1100px) {
+    max-width: 285px;
+  }
+
+  &::placeholder {
+    @include typography-p;
+    color: $white-color;
+    opacity: 1;
+    transition: $fast-transition;
+  }
+
+  &:focus::placeholder {
+    opacity: 0.5;
+  }
+}
+
+.subscription-form-input {
+  @include typography-p;
+  color: $white-color;
+  max-height: 68px;
+  width: 100%;
+  padding: 1.25em 1.375em;
+  background-color: $dark-grey-color;
+  border: $white-border;
+  border-radius: $button-border-radius;
+  transition: $fast-transition;
+
+  // Navbar-Based BreakPoint //
+  @include respond-to(1100px) {
+    max-width: 285px;
+  }
+
+  &:focus {
+    outline: $green-border;
+  }
+}
+
+.subscription-form-submit-button {
+  @include flex-center;
+  @include typography-h4;
+  color: $dark-grey-color;
+  max-height: 68px;
+  width: 100%;
+  padding: 1em 1.5em;
+  background-color: $green-color;
+  border: none;
+  border-radius: $button-border-radius;
+  transition: $fast-transition;
+
+  // Navbar-Based BreakPoint //
+  @include respond-to(1100px) {
+    max-width: 249px;
+  }
+
+  &:hover {
+    color: $green-color;
+    background-color: $dark-grey-color;
+    outline: $green-border;
+  }
+}

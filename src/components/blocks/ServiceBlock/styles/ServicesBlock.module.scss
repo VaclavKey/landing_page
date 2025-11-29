@@ -1,0 +1,32 @@
+@import '../../../../styles/index.scss';
+
+.services-block {
+  margin-bottom: $block-bottom-spacing-mobile;
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    margin-bottom: $block-bottom-spacing-tablet;
+  }
+
+  // Desktop Styles //
+  @include respond-to(desktop-s) {
+    margin-bottom: $block-bottom-spacing-s;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  width: 100%;
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Desktop Styles //
+  @include respond-to(desktop-s) {
+    gap: 2.5em;
+  }
+}

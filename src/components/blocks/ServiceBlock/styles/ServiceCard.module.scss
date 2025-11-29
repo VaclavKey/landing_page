@@ -1,0 +1,115 @@
+@import '../../../../styles/index';
+
+.card {
+  @include flex-between;
+  flex-direction: column-reverse;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  border-radius: $container-border-raidus;
+  border: $dark-border;
+  box-shadow: $container-box-shadow;
+  transition: $medium-transition;
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    padding: 3.125em 2.25em;
+    flex-direction: row;
+  }
+
+  // Desktop Styles //
+  @include respond-to(desktop-s) {
+    padding: 3.125em;
+  }
+
+  &:has(.card-button:hover) {
+    filter: brightness(0.7);
+  }
+}
+
+.content {
+  @include flex-center;
+  flex-direction: column;
+  gap: 1em;
+  flex: 1;
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    gap: 5.625em;
+    align-items: flex-start;
+  }
+}
+
+.composed-title {
+  @include flex-center;
+  flex-direction: column;
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    align-items: flex-start;
+  }
+}
+
+.composed-title-text {
+  @include typography-h3;
+  width: max-content;
+  padding: 0em 0.5em;
+  border-radius: 0.5em;
+}
+
+.card-button {
+  @include flex-between;
+  background-color: transparent;
+  border: none;
+}
+
+.card-button-icon {
+  width: 20px;
+  height: 20px;
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    width: 30px;
+    height: 30px;
+  }
+
+  // Desktop Styles //
+  @include respond-to(desktop-s) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.svg-circle {
+  cx: 1.5em;
+  cy: 1.5em;
+  r: 1.4em;
+}
+
+.svg-arrow {
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.card-button-text {
+  @include typography-h4;
+  width: max-content;
+  margin-left: 1em;
+}
+
+.image {
+  width: 100%;
+  max-width: 140px;
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    max-width: 160px;
+  }
+
+  // Desktop Styles //
+  @include respond-to(desktop-s) {
+    max-width: none;
+  }
+}

@@ -1,0 +1,91 @@
+@import '../../../../styles/index.scss';
+
+.navigation-section {
+  display: grid;
+  gap: 2em;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 6fr;
+  grid-template-areas:
+    'area1'
+    'area2'
+    'area3';
+
+  // Mobile-Large Styles //
+  @include respond-to(mobile-l) {
+    grid-template-rows: 1fr 7fr;
+    grid-template-areas:
+      'area1 area2'
+      'area3 area3';
+  }
+
+  // Navbar-Based BreakPoint-1 //
+  @include respond-to(550px) {
+    grid-template-columns: 9fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  // Navbar-Based BreakPoint-2 //
+  @include respond-to(1100px) {
+    @include flex-between;
+  }
+}
+
+.home-button {
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: $fast-transition;
+  }
+}
+
+.navigation-logo {
+  grid-area: area1;
+}
+
+.navbar {
+  @include flex-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5em;
+  grid-area: area3;
+
+  // Navbar-Based BreakPoint //
+  @include respond-to(550px) {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    gap: 2.5em;
+  }
+}
+
+.navbar-link {
+  @include typography-p;
+  color: $white-color;
+  text-decoration: underline;
+  transition: $fast-transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.social-links {
+  @include flex-end;
+  gap: 1.25em;
+  width: max-content;
+  grid-area: area2;
+}
+
+.social-link {
+  @include flex-center;
+  transition: $fast-transition;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}

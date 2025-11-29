@@ -1,0 +1,59 @@
+@import '../../../../styles/index.scss';
+
+.footer {
+  @include flex-start;
+  flex-direction: column;
+  gap: 3.125em;
+  width: 100%;
+  padding: 1.5em;
+  background-color: $dark-color;
+  border-radius: 3em 3em 0em 0em;
+
+  // Navbar-Based BreakPoint //
+  @include respond-to(550px) {
+    padding: 2em;
+  }
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    padding: 3.375em 3.75em 3.125em 3.75em;
+  }
+}
+
+.navigation-and-contacts {
+  @include flex-between;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+
+  // Navbar-Based BreakPoint //
+  @include respond-to(550px) {
+    gap: 4.125em;
+  }
+}
+
+.team-button {
+  @include flex-center;
+  @include typography-h4;
+  color: $white-color;
+  font-weight: 300;
+  max-height: 68px;
+  width: 100%;
+  padding: $button-padding;
+  background-color: $dark-color;
+  border: none;
+  border-radius: $button-border-radius;
+  outline: $white-border;
+  transition: $fast-transition;
+
+  // Navbar-Based BreakPoint //
+  @include respond-to(1100px) {
+    max-width: 269px;
+  }
+
+  &:hover {
+    color: $dark-color;
+    background-color: $white-color;
+    outline: $dark-border;
+  }
+}

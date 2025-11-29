@@ -1,0 +1,33 @@
+@import '../../../../styles/index.scss';
+
+.footer-bottom {
+  @include flex-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3.125em;
+  width: 100%;
+}
+
+.copyright-and-policy {
+  @include flex-start;
+  gap: 2.5em;
+}
+
+.copyright-and-policy-text {
+  @include typography-p;
+  color: $white-color;
+  line-height: $line-height;
+}
+
+.policy-text {
+  text-decoration: underline;
+  transition: $fast-transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.horizontal-line {
+  background: $white-color;
+}
