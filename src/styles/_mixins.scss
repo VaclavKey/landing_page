@@ -1,0 +1,173 @@
+// Flex-Box //
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Media-Query //
+
+@mixin respond-to($value) {
+  @if map-has-key($breakpoints, $value) {
+    $width: map-get($breakpoints, $value);
+
+    @media (min-width: $width) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+// Font-Size //
+
+:root {
+  --h1-font-size: 3.75em;
+
+  @media (max-width: $bp-d-l) {
+    --h1-font-size: 3.5em;
+  }
+  @media (max-width: $bp-d-s) {
+    --h1-font-size: 2.75em;
+  }
+  @media (max-width: $bp-t) {
+    --h1-font-size: 2.25em;
+  }
+  @media (max-width: $bp-m-l) {
+    --h1-font-size: 1.75em;
+  }
+  @media (max-width: $bp-m-s) {
+    --h1-font-size: 1.25em;
+  }
+
+  --h2-font-size: 2.5em;
+
+  @media (max-width: $bp-d-l) {
+    --h2-font-size: 2.25em;
+  }
+  @media (max-width: $bp-d-s) {
+    --h2-font-size: 2em;
+  }
+  @media (max-width: $bp-t) {
+    --h2-font-size: 1.75em;
+  }
+  @media (max-width: $bp-m-l) {
+    --h2-font-size: 1.5em;
+  }
+  @media (max-width: $bp-m-s) {
+    --h2-font-size: 1.25em;
+  }
+
+  --h3-font-size: 1.875em;
+
+  @media (max-width: $bp-d-l) {
+    --h3-font-size: 1.625em;
+  }
+  @media (max-width: $bp-d-s) {
+    --h3-font-size: 1.5em;
+  }
+  @media (max-width: $bp-t) {
+    --h3-font-size: 1.375em;
+  }
+  @media (max-width: $bp-m-l) {
+    --h3-font-size: 1.25em;
+  }
+  @media (max-width: $bp-m-s) {
+    --h3-font-size: 1.125em;
+  }
+
+  --h4-font-size: 1.25em;
+
+  @media (max-width: $bp-d-l) {
+    --h4-font-size: 1.25em;
+  }
+  @media (max-width: $bp-d-s) {
+    --h4-font-size: 1.15em;
+  }
+  @media (max-width: $bp-t) {
+    --h4-font-size: 1.05em;
+  }
+  @media (max-width: $bp-m-l) {
+    --h4-font-size: 1em;
+  }
+  @media (max-width: $bp-m-s) {
+    --h4-font-size: 0.95em;
+  }
+
+  --p-font-size: 1.125em;
+
+  @media (max-width: $bp-d-l) {
+    --p-font-size: 1.125em;
+  }
+  @media (max-width: $bp-d-s) {
+    --p-font-size: 1.125em;
+  }
+  @media (max-width: $bp-t) {
+    --p-font-size: 1.125em;
+  }
+  @media (max-width: $bp-m-l) {
+    --p-font-size: 1.1em;
+  }
+  @media (max-width: $bp-m-s) {
+    --p-font-size: 1.075em;
+  }
+}
+
+// Typography //
+
+@mixin typography-p {
+  font-family: $font-family;
+  font-size: var(--p-font-size);
+  font-weight: $regular-font-weight;
+  color: $black-color;
+}
+
+@mixin typography-h1 {
+  font-family: $font-family;
+  font-size: var(--h1-font-size);
+  font-weight: $medium-font-weight;
+  color: $black-color;
+}
+
+@mixin typography-h2 {
+  font-family: $font-family;
+  font-size: var(--h2-font-size);
+  font-weight: $medium-font-weight;
+  color: $black-color;
+}
+
+@mixin typography-h3 {
+  font-family: $font-family;
+  font-size: var(--h3-font-size);
+  font-weight: $medium-font-weight;
+  color: $black-color;
+}
+
+@mixin typography-h4 {
+  font-family: $font-family;
+  font-size: var(--h4-font-size);
+  font-weight: $regular-font-weight;
+  line-height: $line-height;
+  color: $black-color;
+}

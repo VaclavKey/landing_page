@@ -1,0 +1,63 @@
+// Colors //
+$dark-color: #191a23;
+$green-color: #b9ff66;
+$grey-color: #f3f3f3;
+$medium-grey-color: #898989;
+$dark-grey-color: #292a32;
+$white-color: #ffffff;
+$black-color: #000000;
+
+// Font //
+$font-family: 'Space Grotesk', sans-serif;
+
+$regular-font-weight: 400;
+$medium-font-weight: 500;
+
+$h1-font-size: 3.75rem;
+$h2-font-size: 2.5em;
+$h3-font-size: 1.875em;
+$h4-font-size: 1.25em;
+$p-font-size: 1.125em;
+
+$line-height: 1.75em;
+
+// Button //
+$button-border-radius: 14px;
+$button-padding: 1.25em 2.1875em;
+
+// Container //
+$container-border-raidus: 45px;
+$container-box-shadow: 0 0.3125em $dark-color;
+
+// Transitions //
+$fast-transition: all 0.1s ease;
+$medium-transition: all 0.2s ease;
+$slow-transition: all 0.3s ease;
+
+// Spacing //
+$block-bottom-spacing-mobile: 3em;
+$block-bottom-spacing-tablet: 4.5em;
+$block-bottom-spacing-s: 6.25em;
+$block-bottom-spacing-m: 8.75em;
+$block-bottom-spacing-l: 13em;
+
+// Border/Outline //
+$white-border: 1px solid $white-color;
+$dark-border: 1px solid $dark-color;
+$green-border: 1px solid $green-color;
+
+// Desktop-First BreakPoints //
+$bp-m-s: 319px;
+$bp-m-l: 413px;
+$bp-t: 833px;
+$bp-d-s: 1279px;
+$bp-d-l: 1439px;
+
+// Mobile-First BreakPoints //
+$breakpoints: (
+  mobile-s: 320px,
+  mobile-l: 414px,
+  tablet: 834px,
+  desktop-s: 1280px,
+  desktop-l: 1440px,
+);
