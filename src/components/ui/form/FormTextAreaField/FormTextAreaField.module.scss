@@ -1,0 +1,48 @@
+@import '../../../../styles/index.scss';
+
+.textarea-field {
+  @include flex-start;
+  flex-direction: column;
+  gap: 0.25em;
+  max-width: 556px;
+  width: 100%;
+}
+
+.input-label {
+  @include typography-p;
+  font-size: 1em;
+  line-height: $line-height;
+
+  &.required::after {
+    content: '*';
+    color: $black-color;
+  }
+}
+
+.textarea {
+  @include typography-p;
+  color: $black-color;
+  min-height: 190px;
+  width: 100%;
+  padding: 1.125em 1.875em;
+  background-color: $white-color;
+  border: $dark-border;
+  border-radius: $button-border-radius;
+  resize: none;
+  transition: $fast-transition;
+
+  &:focus {
+    outline: $green-border;
+  }
+
+  &::placeholder {
+    @include typography-p;
+    color: $medium-grey-color;
+    opacity: 1;
+    transition: $fast-transition;
+  }
+
+  &:focus::placeholder {
+    opacity: 0.5;
+  }
+}
