@@ -1,4 +1,4 @@
-import type { HeadingAndSubheadingProps } from '../types/components'
+import type { HeadingAndSubheadingProps } from '../types/ui/basic'
 
 type HeadingKey = 'services' | 'caseStudies' | 'process' | 'team' | 'testimonials' | 'contact'
 
