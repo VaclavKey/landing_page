@@ -1,0 +1,18 @@
+@import '../../../../styles/index';
+
+.cards {
+  @include flex-center;
+  flex-direction: column;
+  gap: 1.875em;
+  margin-bottom: $block-bottom-spacing-mobile;
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    margin-bottom: $block-bottom-spacing-tablet;
+  }
+
+  // Desktop Styles //
+  @include respond-to(desktop-s) {
+    margin-bottom: $block-bottom-spacing-m;
+  }
+}
