@@ -100,7 +100,13 @@ export const ContactBlock = () => {
         </form>
 
         {/* Side-Illustration */}
-        <Illustration className={styles['image']} src={contact_illustration} alt="Illustration" />
+        
+        <Illustration 
+          maxWidth={367} 
+          className={styles['image']} 
+          src={contact_illustration} 
+          alt="Illustration" 
+        />
       </div>
     </div>
   )

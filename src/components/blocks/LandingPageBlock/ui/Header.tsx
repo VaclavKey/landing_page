@@ -16,6 +16,7 @@ export const Header = () => {
         </div>
         <Illustration
           className={styles['image']}
+          maxWidth={600}
           src={headerIllustration}
           alt="Header Illustration"
         />
