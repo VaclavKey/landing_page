@@ -1,0 +1,95 @@
+@import '../../../styles/index';
+
+.card {
+  @include flex-between;
+  flex-direction: column-reverse;
+  gap: 1em;
+  position: relative;
+  padding: 2em 1em 3em 1em;
+  margin-bottom: $block-bottom-spacing-mobile;
+  border-radius: $container-border-raidus;
+
+  // Mobile-Large Styles //
+  @include respond-to(mobile-l) {
+    gap: 2em;
+    padding: 2em 2em 3em 2em;
+    margin-bottom: $block-bottom-spacing-tablet;
+  }
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    flex-direction: row;
+    padding: 1em 5em 1em 3em;
+  }
+  // Desktop Styles //
+  @include respond-to(desktop-s) {
+    padding: 0em 8.75em 0em 3.75em;
+    margin-bottom: $block-bottom-spacing-m;
+  }
+
+  // Card Background //
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $grey-color;
+    border-radius: $container-border-raidus;
+    z-index: -1;
+
+    // Tablet Styles //
+    @include respond-to(tablet) {
+      top: 6%;
+      height: 88%;
+    }
+  }
+}
+
+.content {
+  @include flex-start;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 1.625em;
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    align-items: baseline;
+    text-align: start;
+    gap: 1em;
+  }
+
+  // Desktop Styles //
+  @include respond-to(desktop-s) {
+    gap: 1.625em;
+  }
+}
+
+.heading {
+  @include typography-h3;
+  color: $black-color;
+  max-width: 500px;
+}
+
+.text {
+  @include typography-p;
+  color: $black-color;
+  max-width: 500px;
+}
+
+.cta-button {
+  @include typography-h4;
+  color: $white-color;
+  padding: $button-padding;
+  background-color: $dark-color;
+  border-radius: $button-border-radius;
+  border: none;
+  transition: $fast-transition;
+
+  &:hover {
+    color: $black-color;
+    background-color: $grey-color;
+    outline: $dark-border;
+  }
+}
