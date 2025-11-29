@@ -32,6 +32,8 @@
 }
 
 .home-button {
+  max-width: 180px;
+
   &:hover {
     cursor: pointer;
     opacity: 0.7;
@@ -41,6 +43,7 @@
 
 .navigation-logo {
   grid-area: area1;
+  width: 100%;
 }
 
 .navbar {
@@ -82,10 +85,15 @@
 
 .social-link {
   @include flex-center;
+  max-width: 30px;
   transition: $fast-transition;
 
   &:hover {
     cursor: pointer;
     opacity: 0.7;
   }
+}
+
+.social-link-icon {
+  width: 100%;
 }

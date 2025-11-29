@@ -1,4 +1,5 @@
 import cta_illustration from '../../../assets/illustrations/cta.png'
+import { Illustration } from '../../ui/Illustration/Illustration'
 import styles from './CTABlock.module.scss'
 
 export const CTABlock = () => {
@@ -22,13 +23,11 @@ export const CTABlock = () => {
         </div>
 
         {/* Side-Illustration */}
-        <div className={styles['media']}>
-          <img
-            className={styles['image']}
-            src={cta_illustration}
-            alt="Team collaboration illustration"
-          />
-        </div>
+        <Illustration 
+          maxWidth={359}
+          src={cta_illustration}
+          alt="Team collaboration illustration"
+        />
       </div>
     </div>
   )

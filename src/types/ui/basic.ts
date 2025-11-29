@@ -1,8 +1,8 @@
 export interface IllustrationProps {
   src: string
   alt: string
+  maxWidth: number
   className?: string
-  style?: React.CSSProperties
 }
 
 export interface HorizontalLineProps {

@@ -92,7 +92,6 @@
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.5s ease-in-out;
-  margin-top: 1em;;
 
   &.open {
     max-height: 90vh;
@@ -100,6 +99,7 @@
     height: max-content;
     transform: translateY(0);
     overflow: auto;
+    margin-top: 1em;
 
     // Tablet Styles //
     @include respond-to(tablet) {

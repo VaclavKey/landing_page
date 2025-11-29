@@ -1,12 +1,11 @@
 import type { IllustrationProps } from '../../../types/ui/basic'
-import styles from './Illustration.module.scss'
 
 export const Illustration = (props: IllustrationProps) => {
   return (
-    <div className={styles['media']}>
+    <div style={{ maxWidth: props.maxWidth + 'px' }}>
       <img 
-        className={props.className} 
-        style={props.style} 
+        className={props.className}
+        style={{ width: '100%' }} 
         src={props.src} 
         alt={props.alt} 
       />
