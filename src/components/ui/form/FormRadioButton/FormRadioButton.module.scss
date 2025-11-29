@@ -1,0 +1,61 @@
+@import '../../../../styles/index.scss';
+
+.radio-label {
+  @include flex-center;
+  gap: 1em;
+  width: max-content;
+  cursor: pointer;
+
+  input[type='radio'] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  input[type='radio']:checked + span {
+    &::before {
+      background: $white-color;
+    }
+
+    &::after {
+      transform: translateY(-50%) scale(1);
+    }
+  }
+
+  &:hover span::before {
+    border-color: $green-color;
+    transform: scale(1.05);
+  }
+}
+
+.radio-button-text {
+  @include typography-p;
+  @include flex-center;
+  position: relative;
+  gap: 1em;
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    width: 1.75em;
+    height: 1.75em;
+    background: $white-color;
+    border: 1.5px solid $dark-color;
+    border-radius: 50%;
+    transition: all 0.2 ease;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    width: 1em;
+    height: 1em;
+    background: $green-color;
+    border-radius: 50%;
+    transform: translateY(-50%) scale(0);
+    transition: transform 0.2s ease;
+  }
+}
