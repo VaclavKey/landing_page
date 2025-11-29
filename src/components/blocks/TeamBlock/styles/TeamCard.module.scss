@@ -1,0 +1,45 @@
+@import '../../../../styles/index';
+
+.card {
+  @include flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1.75em;
+  flex-shrink: 1;
+  max-width: 386px;
+  height: max-content;
+  width: 100%;
+  padding: 2.5em 2.25em;
+  border: $dark-border;
+  border-radius: $container-border-raidus;
+  box-shadow: $container-box-shadow;
+
+  // Mobile-Large Styles //
+  @include respond-to(mobile-l) {
+    height: 354px;
+  }
+}
+.card-description,
+.card-identity-position {
+  @include typography-p;
+}
+
+.card-heading {
+  @include flex-start;
+}
+
+.card-identity {
+  @include flex-start;
+  align-self: flex-end;
+  flex-direction: column;
+  margin-left: 1.25em;
+}
+
+.card-identity-name {
+  @include typography-h4;
+}
+
+.social-icon {
+  align-self: flex-start;
+  justify-self: flex-start;
+}

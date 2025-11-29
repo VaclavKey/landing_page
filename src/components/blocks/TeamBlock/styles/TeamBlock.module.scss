@@ -1,0 +1,51 @@
+@import '../../../../styles/index';
+
+.cards-block {
+  @include flex-center;
+  flex-direction: column;
+  gap: 2.5em;
+  width: 100%;
+  margin-bottom: $block-bottom-spacing-mobile;
+
+  // Tablet Styles //
+  @include respond-to(tablet) {
+    margin-bottom: $block-bottom-spacing-tablet;
+  }
+
+  // Desktop Styles //
+  @include respond-to(desktop-s) {
+    margin-bottom: $block-bottom-spacing-l;
+  }
+}
+
+.cards {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+}
+
+.team-button {
+  @include typography-h4;
+  color: $white-color;
+  align-self: center;
+  max-width: 386px;
+  width: 100%;
+  padding: $button-padding;
+  background-color: $dark-color;
+  border: none;
+  border-radius: $button-border-radius;
+  transition: $fast-transition;
+
+  // Desktop Styles //
+  @include respond-to(desktop-l) {
+    align-self: flex-end;
+    width: 269px;
+  }
+
+  &:hover {
+    color: $black-color;
+    background-color: $white-color;
+    outline: $dark-border;
+  }
+}
