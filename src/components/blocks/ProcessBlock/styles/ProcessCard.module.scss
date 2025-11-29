@@ -51,13 +51,19 @@
 .card-button {
   @include flex-center;
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   background-color: $grey-color;
   outline: $dark-border;
   border: none;
   border-radius: 50%;
   transition: $fast-transition;
+  margin-left: 2em;
+
+  @include respond-to(tablet) {
+    width: 50px;
+    height: 50px;
+  }
 
   &:hover {
     filter: brightness(0.7);
@@ -66,8 +72,13 @@
 
 .card-button-icon {
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
+
+  @include respond-to(tablet) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .horizontal-line {
@@ -96,7 +107,7 @@
   &.open {
     max-height: 90vh;
     opacity: 1;
-    height: max-content;
+    height: 100%;
     transform: translateY(0);
     overflow: auto;
     margin-top: 1em;
