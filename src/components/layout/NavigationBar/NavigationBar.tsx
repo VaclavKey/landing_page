@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import logo from '../../../assets/logos/navigation-bar.png'
-import styles from './navigationBar.module.scss'
 import { useState } from 'react'
 import { NAVIGATION_LINKS } from '../../../constants/navigationLinks'
+import styles from './NavigationBar.module.scss'
 
 export const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

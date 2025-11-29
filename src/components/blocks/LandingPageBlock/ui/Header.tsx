@@ -1,6 +1,6 @@
 import { Illustration } from '../../../ui/Illustration/Illustration'
 import headerIllustration from '../../../../assets/illustrations/header.png'
-import styles from '../styles/header.module.scss'
+import styles from '../styles/Header.module.scss'
 
 export const Header = () => {
   return (

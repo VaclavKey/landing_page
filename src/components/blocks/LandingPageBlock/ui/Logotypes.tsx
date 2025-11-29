@@ -1,5 +1,5 @@
 import { LOGOTYPES_LIST_ITEMS } from '../../../../constants/logotypesListItems'
-import styles from '../styles/logotypes.module.scss'
+import styles from '../styles/Logotypes.module.scss'
 
 export const Logotypes = () => {
   return (
