@@ -30,9 +30,9 @@ $container-border-raidus: 45px;
 $container-box-shadow: 0 0.3125em $dark-color;
 
 // Transitions //
-$fast-transition: all 0.1s ease;
-$medium-transition: all 0.2s ease;
-$slow-transition: all 0.3s ease;
+$fast-transition: all 0.1s ease-in-out;
+$medium-transition: all 0.2s ease-in-out;
+$slow-transition: all 0.3s ease-in-out;
 
 // Spacing //
 $block-bottom-spacing-mobile: 3em;

@@ -109,8 +109,8 @@
     opacity: 1;
     height: 100%;
     transform: translateY(0);
-    overflow: auto;
     margin-top: 1em;
+    animation: scroll-bar-delay 1s forwards;
 
     // Tablet Styles //
     @include respond-to(tablet) {
@@ -123,6 +123,11 @@
       margin-top: 0;
     }
   }
+}
+
+@keyframes scroll-bar-delay {
+  0% { overflow-y: hidden; }
+  100% { overflow-y: auto; }
 }
 
 .card-description {
