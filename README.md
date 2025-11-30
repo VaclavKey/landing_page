@@ -1,73 +1,123 @@
-# React + TypeScript + Vite
+Ниже готовый, структурированный и профессионально оформленный README.md.
+Он подаёт проект как полноценную портфолио-работу и подчёркивает твой стек, навыки и подход.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# Landing Page — Vite + React + TypeScript
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Адаптивная верстка лендинга по макету с использованием **React**, **TypeScript**, **SCSS** и компонентного подхода.
+Проект создан как портфолио-пример современной фронтенд-разработки с упором на переиспользуемость компонентов, чистую архитектуру и визуальную консистентность.
 
-## React Compiler
+## 🚀 Стек технологий
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Vite** — быстрая сборка и разработка
+* **React + TypeScript** — компонентный подход и типизация
+* **SCSS (модули)** — кастомные стили с переменными, миксинами, структурой и BEM-подобным неймингом
+* **Storybook** — витрина UI-компонентов
+* **ESLint + Prettier** — линтинг и форматирование по единым правилам
+* **Mobile-first адаптив** — корректное отображение на всех устройствах
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Возможности и особенности проекта
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🔹 Компонентная архитектура
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* Каждый блок страницы вынесен в отдельный модуль
+* Внутри блока — структуры `ui`, `styles`, `stories`
+* Переиспользуемые UI-элементы (inputs, radio, карточки, заголовки и т. д.)
+* Чистое разделение ответственности и гибкость в масштабировании
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 🔹 Полный адаптив
+
+* **Mobile-first подход**
+* Минимум хардкода, максимум гибкости
+* Реализация всех состояний макета: mobile / tablet / desktop
+
+### 🔹 SCSS-архитектура
+
+* Переменные (`_variables.scss`)
+* Миксины (`_mixins.scss`)
+* Шрифты, reset, общие стили
+* Чистый и читаемый BEM-подобный подход к именованию классов
+
+### 🔹 Storybook
+
+В проекте настроена полноценная UI-витрина:
+
+* Каждый значимый компонент имеет **отдельную сторис**
+* Возможность визуально протестировать UI изоляционно
+* Удобно для демонстрации заказчикам
+
+---
+
+## 📁 Структура проекта
+
+Файловая структура выдержана по бест-практикам, включает раздельные блоки, UI-компоненты, константы, типы, стили, ассеты.
+
+<details>
+<summary>Полная структура (нажмите, чтобы раскрыть)</summary>
+
+*(сюда можно просто оставить прикреплённую тобой структуру — она и так отличная)*
+
+</details>
+
+---
+
+## 🛠 Установка и запуск
+
+```bash
+# Установка зависимостей
+npm install
+
+# Запуск проекта в режиме разработки
+npm run dev
+
+# Сборка проекта
+npm run build
+
+# Предпросмотр сборки
+npm run preview
+
+# Запуск Storybook
+npm run storybook
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🎯 Цель проекта
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Этот проект разработан как **портфолио-пример** для выхода на рынок фриланса.
+Я сфокусировался на главном:
+
+* качественная адаптивная верстка
+* современный стек
+* компонентность
+* чистый код
+* UI-витрина в Storybook
+
+Тестовое покрытие пока отсутствует — на старте фриланса куда важнее **быстро и качественно верстать**, чем писать тесты, которые редко требуются заказчикам начального уровня.
+
+---
+
+## 📸 Демонстрация
+
+*(сюда можно вставить скриншоты или GIF, если хочешь — скажи, сделаю оформление)*
+
+---
+
+## 📬 Контакты
+
+Если вы хотите сотрудничать или у вас есть проект — буду рад обсудить!
+
+---
+
+Если хочешь, могу:
+
+* добавить бейджи (Vite / TS / React / Storybook / ESLint)
+* добавить GIF с обзором
+* сократить или расширить разделы
+* адаптировать под английскую версию
+* оформить как одностраничный short-README
+
+Сказать — и я подгоню.
