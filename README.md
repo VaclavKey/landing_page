@@ -85,13 +85,13 @@ npm run storybook
 
 ## 📸 Демонстрация
 <a href="https://drive.google.com/file/d/1JEHiCifHQGxP7ngX4f2BtSRCJ_D2BS7J/view?usp=sharing">
-  <img src="./public/demo-button.png" width="300" alt="Демо"/>
+  <img src="./public/demo-button.png" alt="Демо"/>
 </a>
 
 <p>&nbsp;</p>
 
 <a href="https://positivius-landing-page.vercel.app/">
-  <img src="./public/deploy-button.png" width="300" alt="Демо"/>
+  <img src="./public/deploy-button.png" alt="Демо"/>
 </a>
 
 ## 📬 Сотрудничество
