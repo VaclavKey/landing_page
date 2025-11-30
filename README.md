@@ -57,7 +57,7 @@
 <details>
 <summary>Полная структура (нажмите, чтобы раскрыть)</summary>
             
-```
+<pre>
 .eslintrc.js
 .gitignore
 .prettierrc
@@ -311,7 +311,7 @@ src
     └───ui
             basic.ts
             forms.ts
-```
+</pre>
 </details>
 
 ## 🛠 Установка и запуск
