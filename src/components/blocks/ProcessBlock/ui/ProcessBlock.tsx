@@ -6,8 +6,8 @@ export const ProcessBlock = ({ cards }: ProcessBlockProps) => {
   return (
     <div className={styles['process-block']}>
       <div className={styles['cards']}>
-        {cards.map((card) => (
-          <ProcessCard {...card} />
+        {cards.map((card, index) => (
+          <ProcessCard {...card} key={index}/>
         ))}
       </div>
     </div>
