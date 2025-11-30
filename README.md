@@ -1,5 +1,3 @@
----
-
 # Landing Page — Vite + React + TypeScript
 
 Адаптивная верстка лендинга по макету с использованием **React**, **TypeScript**, **SCSS** и компонентного подхода.
@@ -44,7 +42,7 @@
 
 * Каждый значимый компонент имеет **отдельную сторис**
 * Возможность визуально протестировать UI изоляционно
-* Удобно для демонстрации заказчикам
+* Удобно для демонстрации 
 
 ---
 
@@ -55,8 +53,259 @@
 <details>
 <summary>Полная структура (нажмите, чтобы раскрыть)</summary>
 
-*(сюда можно просто оставить прикреплённую тобой структуру — она и так отличная)*
-
+.eslintrc.js
+.gitignore
+.prettierrc
+eslint.config.js
+eslint.config.ts
+index.html
+package-lock.json
+package.json
+README.md
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vitest.config.ts
+vitest.shims.d.ts
+|
+|
+|
+|
+.storybook
+|    main.ts
+|    preview.tsx
+|    vitest.setup.ts
+|
+public
+|    favicon.png
+|
+|
+|
+src
+│   App.scss
+│   App.tsx
+│   main.tsx
+│   
+├───assets
+│   ├───avatars
+│   │       brian-williams.png
+│   │       emily-johnson.png
+│   │       jane-doe.png
+│   │       john-smith.png
+│   │       michael-brown.png
+│   │       sarah-kim.png
+│   │       
+│   ├───icons
+│   │       minus.png
+│   │       plus.png
+│   │       
+│   ├───illustrations
+│   │   │   contact.png
+│   │   │   cta.png
+│   │   │   header.png
+│   │   │   
+│   │   └───cards
+│   │           analytics-and-tracking.png
+│   │           content-creation.png
+│   │           email-marketing.png
+│   │           pay-per-click-advertising.png
+│   │           search-engine-optimization.png
+│   │           social-media-marketing.png
+│   │           
+│   ├───logos
+│   │       amazon.png
+│   │       dribbble.png
+│   │       footer-navigation-bar.png
+│   │       hubspot.png
+│   │       navigation-bar.png
+│   │       netflix.png
+│   │       notion.png
+│   │       zoom.png
+│   │       
+│   └───social-icons
+│           facebook.png
+│           linkedin-dark.png
+│           linkedin.png
+│           twitter.png
+│           
+├───components
+│   ├───blocks
+│   │   ├───CaseStudiesBlock
+│   │   │   ├───stories
+│   │   │   │       CaseStudiesBlock.stories.ts
+│   │   │   │       CaseStudyCard.stories.ts
+│   │   │   │       
+│   │   │   ├───styles
+│   │   │   │       CaseStudiesBlock.module.scss
+│   │   │   │       CaseStudyCard.module.scss
+│   │   │   │       
+│   │   │   └───ui
+│   │   │           CaseStudiesBlock.tsx
+│   │   │           CaseStudyCard.tsx
+│   │   │           
+│   │   ├───ContactBlock
+│   │   │       ContactBlock.module.scss
+│   │   │       ContactBlock.stories.tsx
+│   │   │       ContactBlock.tsx
+│   │   │       
+│   │   ├───CTABlock
+│   │   │       CTABlock.module.scss
+│   │   │       CTABlock.stories.ts
+│   │   │       CTABlock.tsx
+│   │   │       
+│   │   ├───FooterBlock
+│   │   │   ├───stories
+│   │   │   │       FooterBlock.stories.tsx
+│   │   │   │       
+│   │   │   ├───styles
+│   │   │   │       ContactSection.module.scss
+│   │   │   │       FooterBlock.module.scss
+│   │   │   │       FooterBottom.module.scss
+│   │   │   │       NavigationSection.module.scss
+│   │   │   │       SubscriptionBlock.module.scss
+│   │   │   │       
+│   │   │   └───ui
+│   │   │           ContactSection.tsx
+│   │   │           FooterBlock.tsx
+│   │   │           FooterBottom.tsx
+│   │   │           NavigationSection.tsx
+│   │   │           SubscriptionBlock.tsx
+│   │   │           
+│   │   ├───LandingPageBlock
+│   │   │   ├───stories
+│   │   │   │       Header.stories.ts
+│   │   │   │       LandingPageBlock.stories.tsx
+│   │   │   │       Logotypes.stories.ts
+│   │   │   │       
+│   │   │   ├───styles
+│   │   │   │       Header.module.scss
+│   │   │   │       LandingPageBlock.module.scss
+│   │   │   │       Logotypes.module.scss
+│   │   │   │       
+│   │   │   └───ui
+│   │   │           Header.tsx
+│   │   │           LandingPageBlock.tsx
+│   │   │           Logotypes.tsx
+│   │   │           
+│   │   ├───ProcessBlock
+│   │   │   ├───stories
+│   │   │   │       ProcessBlock.stories.ts
+│   │   │   │       ProcessCard.stories.ts
+│   │   │   │       
+│   │   │   ├───styles
+│   │   │   │       ProcessBlock.module.scss
+│   │   │   │       ProcessCard.module.scss
+│   │   │   │       
+│   │   │   └───ui
+│   │   │           ProcessBlock.tsx
+│   │   │           ProcessCard.tsx
+│   │   │           
+│   │   ├───ServiceBlock
+│   │   │   ├───stories
+│   │   │   │       ServiceCard.stories.ts
+│   │   │   │       ServicesBlock.stories.ts
+│   │   │   │       
+│   │   │   ├───styles
+│   │   │   │       ServiceCard.module.scss
+│   │   │   │       ServicesBlock.module.scss
+│   │   │   │       
+│   │   │   └───ui
+│   │   │           ServiceCard.tsx
+│   │   │           ServicesBlock.tsx
+│   │   │           
+│   │   └───TeamBlock
+│   │       ├───stories
+│   │       │       TeamBlock.stories.ts
+│   │       │       TeamCard.stories.ts
+│   │       │       
+│   │       ├───styles
+│   │       │       TeamBlock.module.scss
+│   │       │       TeamCard.module.scss
+│   │       │       
+│   │       └───ui
+│   │               TeamBlock.tsx
+│   │               TeamCard.tsx
+│   │               
+│   ├───layout
+│   │   └───NavigationBar
+│   │           NavigationBar.module.scss
+│   │           NavigationBar.stories.tsx
+│   │           NavigationBar.tsx
+│   │           
+│   └───ui
+│       ├───form
+│       │   ├───FormInputField
+│       │   │       FormInputField.module.scss
+│       │   │       FormInputField.stories.tsx
+│       │   │       FormInputField.tsx
+│       │   │       
+│       │   ├───FormRadioButton
+│       │   │       FormRadioButton.module.scss
+│       │   │       FormRadioButton.stories.tsx
+│       │   │       FormRadioButton.tsx
+│       │   │       
+│       │   ├───FormRadioGroup
+│       │   │       FormRadioGroup.module.scss
+│       │   │       FormRadioGroup.stories.tsx
+│       │   │       FormRadioGroup.tsx
+│       │   │       
+│       │   ├───FormSubmitButton
+│       │   │       FormSubmitButton.module.scss
+│       │   │       FormSubmitButton.stories.tsx
+│       │   │       FormSubmitButton.tsx
+│       │   │       
+│       │   └───FormTextAreaField
+│       │           FormTextAreaField.module.scss
+│       │           FormTextAreaField.stories.tsx
+│       │           FormTextAreaField.tsx
+│       │           
+│       ├───HeadingAndSubheading
+│       │       HeadingAndSubheading.module.scss
+│       │       HeadingAndSubheading.stories.ts
+│       │       HeadingAndSubheading.tsx
+│       │       
+│       ├───HorizontalLine
+│       │       HorizontalLine.module.scss
+│       │       HorizontalLine.stories.tsx
+│       │       HorizontalLine.tsx
+│       │       
+│       └───Illustration
+│               Illustration.module.scss
+│               Illustration.stories.tsx
+│               Illustration.tsx
+│               
+├───constants
+│   │   globals.ts
+│   │   headingsAndSubheading.ts
+│   │   logotypesListItems.ts
+│   │   navigationLinks.ts
+│   │   socialLinks.ts
+│   │   
+│   └───cards
+│           caseStudyCards.ts
+│           processCards.ts
+│           serviceCards.ts
+│           teamCards.ts
+│           
+├───styles
+│       index.scss
+│       _fonts.scss
+│       _mixins.scss
+│       _reset.scss
+│       _variables.scss
+│       
+└───types
+    │   formFields.ts
+    │   
+    ├───blocks
+    │       caseStudy.ts
+    │       process.ts
+    │       services.ts
+    │       team.ts
+    │       
+    └───ui
+            basic.ts
+            forms.ts           
 </details>
 
 ---
@@ -103,18 +352,6 @@ npm run storybook
 
 ---
 
-## 📬 Контакты
+## 📬 Сотрудничество
 
 Если вы хотите сотрудничать или у вас есть проект — буду рад обсудить!
-
----
-
-Если хочешь, могу:
-
-* добавить бейджи (Vite / TS / React / Storybook / ESLint)
-* добавить GIF с обзором
-* сократить или расширить разделы
-* адаптировать под английскую версию
-* оформить как одностраничный short-README
-
-Сказать — и я подгоню.
